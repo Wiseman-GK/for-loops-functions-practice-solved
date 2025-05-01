@@ -5,7 +5,22 @@
 
 export function getClientsWithLetterInName(array, letter) {
   // Your code goes here...
-
+  let letterName = [];
+  for(let g = 0; g < array.length; g++) {
+    let accName = array[g].name;
+    for(let a of accName) {
+      let letterIn = false;
+      if (a == letter){
+        letterIn = true;
+      } else if (a == letter.toUpperCase()) {
+        letterIn = true;
+      }
+      if (letterIn) {
+        letterName.push(array[g].name);
+      }
+    }
+  }
+  return letterName;
 }
 
 // === TEST YOURSELF ===

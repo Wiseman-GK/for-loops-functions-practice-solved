@@ -7,7 +7,13 @@
 
 export function flatArrays(array) {
   // Your code goes here...
-
+  const combArray = [];
+  for(let g = 0; g < array.length; g++) {
+    for(const arrayNum of array[g]) {
+    combArray.push(arrayNum);
+    }
+  }
+  return combArray;
 }
 
 

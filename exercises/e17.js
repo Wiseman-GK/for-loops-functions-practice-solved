@@ -7,7 +7,15 @@
 
 export function doesArrayInclude(array, value) {
   // Your code goes here...
-
+  let isInArray = false;
+  for(let g = 0; g < array.length; g++) {
+    if(array[g] === value){
+      isInArray = true;
+    } else {
+      isInArray = false;
+    }
+  }
+  return isInArray;
 }
 
 
